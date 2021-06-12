@@ -4,6 +4,7 @@ import javax.validation.constraints.*;
 import java.util.Date;
 
 public class PersonForm {
+
     @NotNull
     @Size(min=2, max=30, message = "Имя должно содержать не менее 2 и не более 30 символов")
     private String name;

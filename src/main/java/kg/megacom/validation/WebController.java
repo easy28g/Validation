@@ -36,7 +36,6 @@ public class WebController implements WebMvcConfigurer {
         if (bindingResult.hasErrors()) {
             return "form";
         }
-
         return "redirect:/results";
     }
 

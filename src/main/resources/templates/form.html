@@ -14,6 +14,11 @@
                 margin-top: 15px;
                 font-size: 150%;
          }
+
+         input[type="number"]::-webkit-inner-spin-button {
+            -webkit-apearance; none;
+            margin: 0;
+         }
     </style>
 
 </head>
@@ -30,17 +35,17 @@
         </tr>
         <tr>
             <td class="fields">Age:</td>
-            <td><input type="text" th:field="*{age}" /></td>
+            <td><input type="number" th:field="*{age}" /></td>
             <td style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</td>
         </tr>
         <tr>
             <td class="fields">Email:</td>
-            <td><input type="text" th:field="*{email}" /></td>
+            <td><input type="email" th:field="*{email}" /></td>
             <td style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</td>
         </tr>
         <tr>
             <td class="fields">Experience:</td>
-            <td><input type="text" th:field="*{experience}" /></td>
+            <td><input type="number" th:field="*{experience}" /></td>
             <td style="color:red" th:if="${#fields.hasErrors('experience')}" th:errors="*{experience}">Experience Error</td>
         </tr>
         <tr>
